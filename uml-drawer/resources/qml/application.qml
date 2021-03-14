@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import external.qmlcomponent
 
 ApplicationWindow {
     id: mainWindow
@@ -42,11 +43,16 @@ ApplicationWindow {
 
             Rectangle
             {
-                id: diagram
                 width: 0.75 * (mainWindow.width)
                 height: mainWindow.height - menuBar.height
-                color: "orange"
+                color: "white"
                 border.color: borderColor
+
+                DiagramItem
+                {
+                    objectName: "mainDiagram"
+                    width: parent.width; height: parent.height
+                }
             }
         }
     }

@@ -13,6 +13,6 @@ add_executable(uml_drawer
         resources/qml/application.qml
         src/Application.cpp
         resources/qrc/qml.qrc
-)
+        src/ApplicationWrapper.cpp src/ApplicationWrapper.h src/DiagramGraphics/DiagramItem.cpp src/DiagramGraphics/DiagramItem.h src/DiagramGraphics/IUmlDrawable.h src/DiagramGraphics/SimpleRectangle.h)
 
 target_link_libraries(uml_drawer PRIVATE Qt6::Qml Qt6::Widgets Qt6::QuickControls2)

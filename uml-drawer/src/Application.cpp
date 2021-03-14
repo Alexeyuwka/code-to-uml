@@ -1,10 +1,7 @@
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
+#include "ApplicationWrapper.h"
 
 int main(int argc, char* argv[]) {
-    QGuiApplication application(argc, argv);
-    QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/qml/application.qml")));
+    ApplicationWrapper umlDrawerApplication(argc, argv);
 
-    return application.exec();
+    return umlDrawerApplication.exec();
 }
